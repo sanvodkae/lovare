@@ -10,7 +10,7 @@ export default async (ctx: BotContext) => {
   if (ctx.args[0]?.startsWith?.('edit')) {
     const text = `<b>🖼 Como editar o perfil?</b>
 
-/fav - define sua carta favorita (exemplo: <code>/fav ningning</code>)
+/fav - define sua carta favorita (exemplo: <code>/fav date studio ghibli</code>)
 /fav cor - define a cor que aparece atrás do seu card favorito (exemplo: <code>/fav cor #ff0000</code>)
 /bio - define sua biografia (exemplo: <code>/bio eu amo a ningning</code>)
 /color - define sua cor favorita (exemplo: <code>/color #ff0000</code>)
@@ -74,10 +74,10 @@ export default async (ctx: BotContext) => {
   await ctx.replyWithPhoto(dittoData.url, {
     caption: `🖼 <code>${userD.id}</code>. <b>${escapeForHTML(tgUser.first_name)}</b> ${userD.isPremium ? '💎' : ''}
 
-🌠 <b>Reputação</b> - <i>${pluralize(completeUserData.reputation, 'ponto')}</i>
-🃏 <b>Cartas</b> - <i>${pluralize(await getUserCardsCount(userD.id), 'colecionável', 'is', 1)}</i>
-💸 <b>Moedas</b> - <i>${pluralize(userD.coins, 'moeda')}</i>
-🎲 <b>Giros</b> - <i>${pluralize(userD.maximumDraws - userD.usedDraws, 'giro')} sobrando</i>${favCardText}
+🌠 <b>Reputação</b> - <i>${pluralize(completeUserData.reputation, 'amor')}</i>
+🃏 <b>Cartas</b> - <i>${pluralize(await getUserCardsCount(userD.id), 'memória', 'is', 1)}</i>
+💸 <b>Moedas</b> - <i>${pluralize(userD.coins, 'money')}</i>
+🎲 <b>Giros</b> - <i>${pluralize(userD.maximumDraws - userD.usedDraws, 'love')} sobrando</i>${favCardText}
 
 <i>dica: use <code>/perfil editar</code> para aprender como customizar seu perfil ou tirar stickers e papéis de parede</i>`,
     parse_mode: 'HTML'
