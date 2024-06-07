@@ -2,7 +2,7 @@ import { BotContext } from '../types/context.js'
 import { getMentionedTgUser, mentionUser } from '../utilities/telegram.js'
 
 const ROOT_APP_URL = process.env.CARDS_APP_URL || 'https://girae-web-app-dev.altadena.space/cards'
-const TG_APP_URL = process.env.TG_CARDS_APP_URL || 'https://t.me/giraebot/giraecards'
+const TG_APP_URL = process.env.TG_CARDS_APP_URL || 'https://t.me/thelittlepri_bot'
 
 export default async (ctx: BotContext) => {
   if (ctx.chat!.type !== 'private') {
